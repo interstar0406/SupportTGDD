@@ -1,0 +1,45 @@
+@import ../_core/all
+body
+	font-family: Roboto
+	p
+		font-size: 1.5rem
+		margin-top: 2rem
+
+.home_installment
+	+design_section()
+	.home_form_width
+		+media-breakpoint-up(sm)
+			max-width: 60%
+	h1
+		margin-top: 1rem
+	input
+		width: 70%
+		margin: .5rem
+		display: inline-block
+		&::-webkit-input-placeholder
+			color: lighten($sen, 30%)
+		&:focus,
+		&:active
+			background: $asbestos
+			border-color: lighten($sen,20%)
+	select
+		display: inline-block
+		width: 70%
+		margin: .5rem
+	input[type=submit]
+		width: 50%
+	.form_cttc
+		label[for=cttc]
+			text-align: left
+		label[for=hom]
+			color: $alizarin
+		label[for=fec]
+			color: $emerald
+		input[type=radio]
+			width: 1.5rem
+			height: 1.5rem
+	label
+		display: block
+		text-align: left
+	text
+		height: 80%

@@ -1,0 +1,55 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+block body
+	section.home_installment
+		.container.home_form_width
+			.row
+				.col
+					h1 Tool trả góp
+					.form-group.row
+						.col
+							.title-page.title-xam
+								h2 Input
+							.row
+								.col-12
+								.col-12
+									label(for="tra_truoc") Trả trước
+									input.form-control(type="text" placeholder=".000đ" id="tra_truoc")
+								.col-12
+									label(for="lai_suat") Lãi suất
+									input.form-control(type="text" placeholder="%" id="lai_suat")
+								.col-12
+									label(for="giay_to") Giấy tờ
+									select.form-control(name="gt")
+										option(value="1") CMND + Sổ hộ khẩu
+										option(value="1") CMND + Bằng lái xe/Sổ hộ khẩu
+										option(value="1") CMND + Sổ hộ khẩu + Hóa đơn điện
+										option(value="1") CMND + Bằng lái xe/Sổ hộ khẩu + Hóa đơn điện
+								.col-12
+									label(for="gop_thang") Góp tháng
+									input.form-control(type="text" placeholder=".000đ" id="gop_thang")
+								.col-12
+									.row.form_cttc
+										.col-4
+											label(for="cttc") Công ty tài chính:
+										.col-4
+											label(for="hom") HomeCredit
+											input.form-control(type="radio" name="cttc" id="hom" value="Hom")
+										.col-4
+											label(for="fec") FeCredit
+											input.form-control(type="radio" name="cttc" id="fec" value="Fec")
+								.col-12
+									.row
+										.col-6
+											input.form-control(type="submit" id="sub" value="Output")
+										.col-6
+											input.form-control(type="reset" id="res" value="Reset")
+						.col
+							.title-page.title-xam
+								h2 Output
+							text.form-control.form_text(id="form_output")

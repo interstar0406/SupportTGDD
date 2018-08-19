@@ -1,0 +1,23 @@
+=design_section($maunen: $whites, $mauchu: #black, $min_height: 500px)
+	min-height: $min_height
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	background: $maunen
+	color: $mauchu
+=tag_before_after($mau: darken($whites,50%))
+	position: relative
+	margin-bottom: 1rem
+	&:before,
+	&:after
+		content: ''
+		display: block
+		background: $mau
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+	&:before
+		width: 120px
+		height: 5px
+		bottom: -8px
