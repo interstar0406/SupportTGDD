@@ -97,10 +97,13 @@
                     <h2>Input</h2>
                   </div>
                   <div class="row">
-                    <div class="col-12"></div>
+                    <div class="col-12">
+                      <label for="so_thang">Số tháng</label>
+                      <input class="form-control" type="text" placeholder="" id="so_thang">
+                    </div>
                     <div class="col-12">
                       <label for="tra_truoc">Trả trước</label>
-                      <input class="form-control" type="text" placeholder=".000đ" id="tra_truoc">
+                      <input class="form-control" type="text" placeholder=".đ" id="tra_truoc">
                     </div>
                     <div class="col-12">
                       <label for="lai_suat">Lãi suất</label>
@@ -117,7 +120,7 @@
                     </div>
                     <div class="col-12">
                       <label for="gop_thang">Góp tháng</label>
-                      <input class="form-control" type="text" placeholder=".000đ" id="gop_thang">
+                      <input class="form-control" type="text" placeholder=".đ" id="gop_thang">
                     </div>
                     <div class="col-12">
                       <div class="row form_cttc">
@@ -126,21 +129,21 @@
                         </div>
                         <div class="col-4">
                           <label for="hom">HomeCredit</label>
-                          <input class="form-control" type="radio" name="cttc" id="hom" value="Hom">
+                          <input class="form-control" type="radio" name="cttc" id="cttc" value="HomeCredit">
                         </div>
                         <div class="col-4">
                           <label for="fec">FeCredit</label>
-                          <input class="form-control" type="radio" name="cttc" id="fec" value="Fec">
+                          <input class="form-control" type="radio" name="cttc" id="cttc" value="FeCredit" onchange="change1">
                         </div>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="row">
                         <div class="col-6">
-                          <input class="form-control" type="submit" id="sub" value="Output">
+                          <input class="form-control" type="submit" id="sub" value="Output" onclick="out_put()">
                         </div>
                         <div class="col-6">
-                          <input class="form-control" type="reset" id="res" value="Reset">
+                          <input class="form-control" type="reset">
                         </div>
                       </div>
                     </div>
@@ -150,7 +153,7 @@
                   <div class="title-page title-xam">
                     <h2>Output</h2>
                   </div>
-                  <text class="form-control form_text" id="form_output"></text>
+                  <text class="form-control" id="form_output"></text>
                 </div>
               </div>
             </div>

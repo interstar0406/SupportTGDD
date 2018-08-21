@@ -17,9 +17,11 @@ block body
 								h2 Input
 							.row
 								.col-12
+									label(for="so_thang") Số tháng
+									input.form-control(type="text" placeholder="" id="so_thang")
 								.col-12
 									label(for="tra_truoc") Trả trước
-									input.form-control(type="text" placeholder=".000đ" id="tra_truoc")
+									input.form-control(type="text" placeholder=".đ" id="tra_truoc")
 								.col-12
 									label(for="lai_suat") Lãi suất
 									input.form-control(type="text" placeholder="%" id="lai_suat")
@@ -32,24 +34,24 @@ block body
 										option(value="1") CMND + Bằng lái xe/Sổ hộ khẩu + Hóa đơn điện
 								.col-12
 									label(for="gop_thang") Góp tháng
-									input.form-control(type="text" placeholder=".000đ" id="gop_thang")
+									input.form-control(type="text" placeholder=".đ" id="gop_thang")
 								.col-12
 									.row.form_cttc
 										.col-4
 											label(for="cttc") Công ty tài chính:
 										.col-4
 											label(for="hom") HomeCredit
-											input.form-control(type="radio" name="cttc" id="hom" value="Hom")
+											input.form-control(type="radio" name="cttc" id="cttc" value="HomeCredit")
 										.col-4
 											label(for="fec") FeCredit
-											input.form-control(type="radio" name="cttc" id="fec" value="Fec")
+											input.form-control(type="radio" name="cttc" id="cttc" value="FeCredit" onchange="change1")
 								.col-12
 									.row
 										.col-6
-											input.form-control(type="submit" id="sub" value="Output")
+											input.form-control(type="submit" id="sub" value="Output" onclick="out_put()")
 										.col-6
-											input.form-control(type="reset" id="res" value="Reset")
+											input.form-control(type="reset")
 						.col
 							.title-page.title-xam
 								h2 Output
-							text.form-control.form_text(id="form_output")
+							text.form-control(id="form_output")

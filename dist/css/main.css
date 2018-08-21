@@ -6459,6 +6459,7 @@ body {
   .home_installment .form_cttc label[for=fec] {
     color: #2ecc71; }
   .home_installment .form_cttc input[type=radio] {
+    display: inline-block;
     width: 1.5rem;
     height: 1.5rem; }
   .home_installment label {
