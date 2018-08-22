@@ -60,12 +60,13 @@ $('#sub').on('click', function click() {
 		giayto = 'CMND + Bằng lái xe/Sổ hộ khẩu + Hóa đơn điện';
 	}
 	//chọn công ty tài chính
-	$('#fecr').on('click', function () {
-		cty = $("#fecr").val();
-	});
-	$('#hom').on('click', function () {
-		cty = $("#hom").val();
-	});
+	if ($('#hom').click()) {
+		cty = $('#hom').val();
+	}
+	if ($('#fecr').click()) {
+		cty = $('#fecr').val();
+	}
+
 	//xuất gói trả góp sang output
 	$('#form_output').text('Dạ, bạn có thể dùng gói lãi suất ' + lsuat + '% của công ty tài chính ' + cty + '. Số tiền trả trước là ' + ttruoc + ', trả trong ' + sthang + ' tháng. Mỗi tháng trả ' + gthang + ' (tham khảo, không chính xác 100%). Các giấy tờ cần thiết bao gồm ' + giayto + '. Nếu phù hợp, bạn có thể để lại số điện thoại bên mình liên lạc, hỗ trợ bạn làm hồ sơ trả góp online bạn nha.');
 });
