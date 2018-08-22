@@ -91,7 +91,8 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"><!-- ////////////// END FAVICON ////////////// -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- ////////////// END FAVICON ////////////// -->
   </head>
   <body class="home-page" id="top-page"><!-- ////////////// Header ////////////// --><!-- ////////////// End Header ////////////// -->
 <!-- ////////////// Begin Main ////////////// -->
@@ -139,7 +140,7 @@
                         </div>
                         <div class="col-4 form_cttc">
                           <label class="hom" for="hom"><b>HomeCredit</b></label>
-                          <input class="form-control" type="radio" name="cttc" id="hom" value="HomeCredit">
+                          <input class="form-control" type="radio" name="cttc" id="hom" value="HomeCredit" checked>
                         </div>
                         <div class="col-4 form_cttc">
                           <label class="fec" for="fecr"><b>FeCredit</b></label>
@@ -148,14 +149,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <div class="row">
-                        <div class="col-6">
-                          <input class="form-control" type="submit" id="sub" value="Output">
-                        </div>
-                        <div class="col-6">
-                          <input class="form-control" type="reset" id="reset" value="Reset">
-                        </div>
-                      </div>
+                      <input class="form-control" type="submit" id="sub" value="Output">
                     </div>
                   </div>
                 </div>
@@ -163,7 +157,8 @@
                   <div class="title-page title-xam">
                     <h2>Output</h2>
                   </div>
-                  <text class="form-control out" id="form_output"></text>
+                  <textarea class="form-control out" id="form_output" rows="10" cols="50"></textarea>
+                  <button id="btn-copy">Copy text</button>
                 </div>
               </div>
             </div>

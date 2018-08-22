@@ -6,14 +6,6 @@ block variables
 	- var bodyclass = 'home'
 
 block body
-	//- //- .owl-carousel
-	//- //- 	span ahscbabcabciaícnháibci
-	//- //- 	span ahscbabcabciaícnháibci
-	//- //- 	span ahscbabcabciaícnháibci
-	//- //- 	span ahscbabcabciaícnháibci
-	//- //- 	span ahscbabcabciaícnháibci
-	//- //- 	span ahscbabcabciaícnháibci
-
 	section.home_installment
 		.container.home_form_width
 			.row
@@ -50,18 +42,15 @@ block body
 										.col-4.form_cttc
 											label.hom(for="hom")
 												b HomeCredit
-											input.form-control(type="radio" name="cttc" id="hom" value="HomeCredit")
+											input.form-control(type="radio" name="cttc" id="hom" value="HomeCredit" checked)
 										.col-4.form_cttc
 											label.fec(for="fecr")
 												b FeCredit
 											input.form-control(type="radio" name="cttc" id="fecr" value="FeCredit" )
 								.col-12
-									.row
-										.col-6
-											input.form-control(type="submit" id="sub" value="Output")
-										.col-6
-											input.form-control(type="reset" id="reset" value="Reset")
+									input.form-control(type="submit" id="sub" value="Output")
 						.col
 							.title-page.title-xam
 								h2 Output
-							text.form-control.out(id="form_output")
+							textarea.form-control.out(id="form_output" rows= '10' cols='50')
+							button(id="btn-copy") Copy text

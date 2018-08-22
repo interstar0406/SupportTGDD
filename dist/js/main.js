@@ -37,7 +37,7 @@ $(function () {
 // 		items: 1
 // 	});
 //   });
-var cty;
+var cty = 'HomeCredit';
 $('#hom').on('click', function () {
 	cty = $('#hom').val();
 });
@@ -46,7 +46,7 @@ $('#fecr').on('click', function () {
 });
 
 //event click button Submit
-$('#sub').on('click', function click() {
+$('#sub').on('click', function () {
 	//khai báo biến
 	var lsuat = $('#lai_suat').val(),
 	    ttruoc = $('#tra_truoc').val(),
@@ -67,6 +67,12 @@ $('#sub').on('click', function click() {
 	//chọn công ty tài chính
 
 	//xuất gói trả góp sang output
-	$('#form_output').text('Dạ, bạn có thể dùng gói lãi suất ' + lsuat + '% của công ty tài chính ' + cty + '. Số tiền trả trước là ' + ttruoc + ', trả trong ' + sthang + ' tháng. Mỗi tháng trả ' + gthang + ' (tham khảo, không chính xác 100%). Các giấy tờ cần thiết bao gồm ' + giayto + '. Nếu phù hợp, bạn có thể để lại số điện thoại bên mình liên lạc, hỗ trợ bạn làm hồ sơ trả góp online bạn nha.');
+	$('#form_output').val('Dạ, bạn có thể dùng gói lãi suất ' + lsuat + '% của công ty tài chính ' + cty + '. Số tiền trả trước là ' + ttruoc + ', trả trong ' + sthang + ' tháng. Mỗi tháng trả ' + gthang + ' (tham khảo, không chính xác 100%). Các giấy tờ cần thiết bao gồm ' + giayto + '. Nếu phù hợp, bạn có thể để lại số điện thoại bên mình liên lạc, hỗ trợ bạn làm hồ sơ trả góp online bạn nha.');
+});
+$('#btn-copy').on('click', function () {
+	var copyText = document.getElementById("form_output");
+	copyText.select();
+	document.execCommand("copy");
+	console.log("Copied the text: " + copyText.innerText);
 });
 //# sourceMappingURL=main.js.map
