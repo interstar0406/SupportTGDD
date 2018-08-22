@@ -6,6 +6,14 @@ block variables
 	- var bodyclass = 'home'
 
 block body
+	//- //- .owl-carousel
+	//- //- 	span ahscbabcabciaícnháibci
+	//- //- 	span ahscbabcabciaícnháibci
+	//- //- 	span ahscbabcabciaícnháibci
+	//- //- 	span ahscbabcabciaícnháibci
+	//- //- 	span ahscbabcabciaícnháibci
+	//- //- 	span ahscbabcabciaícnháibci
+
 	section.home_installment
 		.container.home_form_width
 			.row
@@ -18,7 +26,7 @@ block body
 							.row
 								.col-12
 									label(for="so_thang") Số tháng
-									input.form-control(type="text" placeholder="" id="so_thang")
+									input.form-control(type="text" placeholder="tháng" id="so_thang")
 								.col-12
 									label(for="tra_truoc") Trả trước
 									input.form-control(type="text" placeholder=".đ" id="tra_truoc")
@@ -27,31 +35,33 @@ block body
 									input.form-control(type="text" placeholder="%" id="lai_suat")
 								.col-12
 									label(for="giay_to") Giấy tờ
-									select.form-control(name="gt")
+									select.form-control(id="gt")
 										option(value="1") CMND + Sổ hộ khẩu
-										option(value="1") CMND + Bằng lái xe/Sổ hộ khẩu
-										option(value="1") CMND + Sổ hộ khẩu + Hóa đơn điện
-										option(value="1") CMND + Bằng lái xe/Sổ hộ khẩu + Hóa đơn điện
+										option(value="2") CMND + Bằng lái xe/Sổ hộ khẩu
+										option(value="3") CMND + Sổ hộ khẩu + Hóa đơn điện
+										option(value="4") CMND + Bằng lái xe/Sổ hộ khẩu + Hóa đơn điện
 								.col-12
 									label(for="gop_thang") Góp tháng
 									input.form-control(type="text" placeholder=".đ" id="gop_thang")
 								.col-12
-									.row.form_cttc
+									.row
 										.col-4
 											label(for="cttc") Công ty tài chính:
-										.col-4
-											label(for="hom") HomeCredit
-											input.form-control(type="radio" name="cttc" id="cttc" value="HomeCredit")
-										.col-4
-											label(for="fec") FeCredit
-											input.form-control(type="radio" name="cttc" id="cttc" value="FeCredit" onchange="change1")
+										.col-4.form_cttc
+											label.hom(for="hom")
+												b HomeCredit
+											input.form-control(type="radio" name="cttc" id="hom" value="HomeCredit" checked)
+										.col-4.form_cttc
+											label.fec(for="fecr")
+												b FeCredit
+											input.form-control(type="radio" name="cttc" id="fecr" value="FeCredit" )
 								.col-12
 									.row
 										.col-6
-											input.form-control(type="submit" id="sub" value="Output" onclick="out_put()")
+											input.form-control(type="submit" id="sub" value="Output")
 										.col-6
-											input.form-control(type="reset")
+											input.form-control(type="reset" id="reset" value="Reset")
 						.col
 							.title-page.title-xam
 								h2 Output
-							text.form-control(id="form_output")
+							text.form-control.out(id="form_output")

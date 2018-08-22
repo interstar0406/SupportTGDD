@@ -6452,20 +6452,21 @@ body {
     margin: .5rem; }
   .home_installment input[type=submit] {
     width: 50%; }
-  .home_installment .form_cttc label[for=cttc] {
-    text-align: left; }
-  .home_installment .form_cttc label[for=hom] {
-    color: #e74c3c; }
-  .home_installment .form_cttc label[for=fec] {
-    color: #2ecc71; }
-  .home_installment .form_cttc input[type=radio] {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem; }
   .home_installment label {
     display: block;
     text-align: left; }
   .home_installment text {
     height: 80%; }
+  .home_installment .form_cttc label {
+    text-align: center; }
+  .home_installment .form_cttc input[type=radio] {
+    width: 20px;
+    height: 20px; }
+  .home_installment .form_cttc .hom {
+    color: #e74c3c; }
+  .home_installment .form_cttc .fec {
+    color: #27ae60; }
+  .home_installment .out {
+    font: 14px/18px arial,sans-serif; }
 
 /*# sourceMappingURL=main.css.map */
